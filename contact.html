@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shopping Cart</title>
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        footer {
+            margin-top: auto;
+        }
+
+        .about {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .about-paragraph {
+            font-family: "Kode Mono", monospace;
+            width: 85%;
+            margin: 20px;
+            font-size: 17px;
+            text-align: justify;
+        }
+
+        #contactForm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .block {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .info {
+            height: 400px;
+            width: auto;
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            /* border: 1px green solid; */
+            padding: 10px;
+            /* background-color: rgb(2, 115, 2); */
+            color: black;
+            border-radius: 5px;
+            /* justify-content: space-between; */
+        }
+
+        .info p {
+            /* font-style: italic; */
+            font-weight: bold;
+            align-self: center;
+            /* background-color: green; */
+            width: 100%;
+            text-align: center;
+            font-family: "Kode Mono", monospace;
+            font-size: 30px;
+            margin-bottom: 50px;
+            margin-top: 5px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>FashionFrenzy</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./Cart.html">Cart</a></li>
+                <li><a href="./About.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="block">
+
+        <div class="info">
+            <h3>CONTACT INFO</h3>
+            <p>Name: Anisha</p>
+            <p>USN: 4SF22CI013</p>
+            <p>Email: aniishha29@outlook.com</p>
+
+        </div>
+        <form id="contactForm" action="https://formspree.io/f/mqkrbela" method="POST">
+            <div class="input-container">
+
+                <input type="text" id="name" name="name" required><br>
+                <label class="label" for="name">Name</label><br>
+            </div>
+            <div class="input-container">
+
+                <input type="email" id="email" name="email" required><br>
+                <label class="label" for="email">Email</label><br>
+            </div>
+            <div class="input-container">
+
+                <textarea id="message" name="message" rows="4" style="overflow: auto;" placeholder="message"
+                    required></textarea><br>
+            </div>
+
+            <input class="Bbutton" type="submit" value="Submit">
+        </form>
+    </div>
+
+    <footer>
+
+        <p>&copy; 2024 My Shopping Website project by anisha </p>
+    </footer>
+
+
+</html>

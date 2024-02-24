@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shopping Website</title>
+    <link rel="stylesheet" href="./index.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1>FashionFrenzy</h1>
+        <nav>
+            <ul>
+                <li><a onclick="location.reload()" href="#">Home</a></li>
+                <li><a href="./Cart.html">Cart</a></li>
+                <li><a href="./About.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2 style="margin-left: 20px;" class="featured">Featured Products</h2>
+    <main>
+        <section id="featured-products">
+            <div class="product">
+                <img src="./images/8281358400_1_1_1.jpg" alt="Product 1">
+                <h3>Navy Blue jacket</h3>
+                <p>$20.5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/4302304802_1_1_1.jpg" alt="Product 1">
+                <h3>Sky blue Shirt</h3>
+                <p>$25.5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/4231426250_2_1_1.jpg" alt="Product 1">
+                <h3>White tshirt</h3>
+                <p>$50.5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/5584362800_2_1_1.jpg" alt="Product 1">
+                <h3>Black tshirt</h3>
+                <p>$10.5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/6224429712_2_1_1.jpg" alt="Product 1">
+                <h3>White oversized tshit</h3>
+                <p>$24.5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/7380701800_1_1_1.jpg" alt="Product 1">
+                <h3>Black Pant</h3>
+                <p>$16.5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/1538406800_2_1_1.jpg" alt="Product 1">
+                <h3>Black hoddie</h3>
+                <p>$7.5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/4231426250_2_1_1.jpg" alt="Product 1">
+                <h3>Round Neck tshirt</h3>
+                <p>$10.5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/4302304802_1_1_1.jpg" alt="Product 1">
+                <h3>Gray Pant</h3>
+                <p>$90.5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/5584362800_2_1_1.jpg" alt="Product 1">
+                <h3>Jeans</h3>
+                <p>$22.5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/8281358400_1_1_1.jpg" alt="Product 1">
+                <h3>Balck Jeans</h3>
+                <p>$21.5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <!-- More products can be added similarly -->
+        </section>
+
+        <h2 class="featured">Latest Offers</h2>
+        <section id="latest-offers">
+            <div class="offer">
+                <img src="./images/4231426250_2_1_1.jpg" alt="Offer 1">
+            </div>
+            <div class="offer">
+                <img src="./images/4302304802_1_1_1.jpg" alt="Offer 2">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; website made by Anisha</p>
+    </footer>
+
+    <script>document.addEventListener('DOMContentLoaded', function () {
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', addToCart);
+            });
+
+        });
+        function addToCart(event) {
+            const button = event.target;
+            const name = button.dataset.name;
+            const price = parseFloat(button.dataset.price);
+            const Image = button.dataset.Image;
+
+            // Create an object representing the item
+            const newItem = {
+                name: name,
+                price: price,
+                Image: Image
+            };
+
+            // Retrieve existing cart items from LocalStorage
+            let cartItems = localStorage.getItem('cartItems');
+            cartItems = cartItems ? JSON.parse(cartItems) : [];
+
+            // Add the new item to the cart
+            cartItems.push(newItem);
+
+            // Store the updated cart items back to LocalStorage
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+            // Alert the user that the item has been added to the cart (optional)
+            // alert('Item added to cart!');
+        }
+    </script>
+</body>
+
+</html>

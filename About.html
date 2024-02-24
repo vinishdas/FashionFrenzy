@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shopping Cart</title>
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+        }
+
+
+
+        footer {
+            margin-top: auto;
+        }
+
+        .about {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .about h2 {
+            text-decoration: underline;
+
+        }
+
+        .about-paragraph {
+            font-family: "Kode Mono", monospace;
+            display: flex;
+            flex-direction: column;
+            width: 85%;
+            margin: 20px;
+            font-size: 17px;
+            text-align: justify;
+        }
+
+
+        .body {
+            display: flex;
+            flex-direction: column;
+
+            /* align-items: center; */
+        }
+
+
+
+        .par1 {
+            margin-top: 20px;
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            /* width: 100%; */
+
+        }
+
+        #par2 {
+            align-items: flex-end;
+
+        }
+
+        .par1 p {
+            width: 50%;
+            text-align: justify;
+        }
+
+        .par1 img {
+
+            width: 300px;
+            height: 300px;
+        }
+
+        @media screen and (max-width: 576px) {
+            .par1 {
+                flex-direction: column;
+                justify-content: center;
+                /* align-items: center; */
+                /* border: 2px solid green; */
+
+            }
+
+
+
+            .body {
+                margin: 10px;
+                justify-content: center;
+                /* align-self: center; */
+                /* border: 2px solid blue; */
+
+            }
+
+            .body h3 {
+                align-self: start;
+            }
+
+            .body p {
+                margin-top: 20px;
+                margin-bottom: 10px;
+                align-self: center;
+                width: 80%;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>FashionFrenzy</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./Cart.html">Cart</a></li>
+                <li><a href="./About.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="about">
+        <h2>About</h2>
+
+        <div class="about-paragraph">
+            <div class="par1">
+                <div class="body">
+                    <h3>Welcome to FashionFrenzy</h3>
+
+                    <p>FashionFrenzy is your premier destination for all things fashion-forward and trendy. With a
+                        passion
+                        for
+                        style and a commitment to quality, we're here to help you discover and embrace your unique
+                        fashion
+                        identity. </p>
+                </div>
+                <img src="./images/undraw_fashion_blogging_re_fhi5.svg" alt="">
+            </div>
+            <div class="par1">
+                <img src="./images/undraw_shopping_re_hdd9.svg" alt="">
+                <div class="body" id="par2">
+                    <h3>Curated Collection</h3>
+
+                    <p>Explore our carefully curated collection featuring the latest trends, timeless classics, and
+                        everything in between. From chic apparel and accessories to must-have footwear and beauty
+                        essentials, there's something for every style preference and occasion. </p>
+                </div>
+            </div>
+            <div class="par1">
+                <div class="body">
+                    <h3>Thank You for Choosing FashionFrenzy</h3>
+
+                    <p>Thank you for choosing FashionFrenzy as your go-to destination for all your fashion needs. Join
+                        us on this exciting journey as we continue to inspire and empower you to unleash your inner
+                        fashionista.</p>
+                </div>
+                <img src="./images/undraw_wishlist_re_m7tv.svg" alt="">
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Shopping Website project by anisha </p>
+    </footer>
+
+</html>
