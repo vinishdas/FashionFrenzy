@@ -16,19 +16,19 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #17ad11;
+  background: #119bad;
   border-radius: 3px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #188705;
+  background: #053b87;
 }
 
 h1 {
   /* border: 2px solid green; */
   text-align: center;
-  color: green;
+  color: #119bad;
 }
 /* General styles */
 body {
@@ -43,7 +43,7 @@ header {
   position: sticky;
   top: 0px;
   background-color: white;
-  border-bottom: 1px green solid;
+  border-bottom: 1px #119bad solid;
   margin-bottom: 0px;
 }
 
@@ -80,16 +80,19 @@ nav ul li a {
   color: #000000;
   text-decoration: none;
   transition: all 0.3s;
+  position: relative;
+  top: 0px;
+  left: 0px;
 }
 nav ul li a:hover {
   font-size: 25px;
   font-weight: bold;
-  color: green;
+  color: #119bad;
   /* transform: scale(1.1); */
 }
 
 .featured {
-  color: green;
+  color: #119bad;
 }
 main {
   padding: 20px;
@@ -134,7 +137,7 @@ section {
 }
 .offer {
   border-radius: 5px;
-  background-color: green;
+  background-color: #119bad;
   background-image: linear-gradient(to bottom, #096ab9, #0a6800);
 }
 .offer img {
@@ -158,7 +161,7 @@ p {
 
   height: 40px;
   border-radius: 0px 0px 10px 10px;
-  border: green 2px solid;
+  border: #119bad 2px solid;
   background-color: white;
   /* box-shadow: rgb(105, 169, 113) 2px 2px 2px; */
   transition: all 0.3s;
@@ -166,7 +169,7 @@ p {
 .product button:hover,
 .offer button:hover {
   color: white;
-  background-color: rgb(21, 133, 21);
+  background-color: #119bad;
   border: white 1px solid;
 }
 .product button:active,
@@ -174,7 +177,7 @@ p {
   transform: scale(1.1);
 }
 footer {
-  background-color: green;
+  background-color: #119bad;
   color: #fff;
   text-align: center;
   padding: 10px;
@@ -214,7 +217,7 @@ input[type="message"]:focus ~ .label,
 input[type="message"]:valid ~ .label {
   top: -20px;
   font-size: 16px;
-  color: green;
+  color: #119bad;
 }
 .input-container input[type="email"]:focus ~ .label,
 input[type="message"]:focus
@@ -224,7 +227,7 @@ input[type="message"]:focus
   ~ .label {
   top: -20px;
   font-size: 16px;
-  color: green;
+  color: #119bad;
 }
 
 .input-container .underline {
@@ -259,7 +262,7 @@ textarea {
   padding: 10px;
 }
 textarea:focus {
-  border-color: green; /* Change border color when textarea is focused */
+  border-color: #119bad; /* Change border color when textarea is focused */
   outline: none; /* Remove the default focus outline */
   /* Add any additional styles you want when textarea is focused */
 }
@@ -275,11 +278,11 @@ textarea:focus {
   transition: all 0.3s;
 }
 .Bbutton:hover {
-  border: rgb(0, 128, 0) 2px solid;
+  border: #119bad 2px solid;
   color: #000000fd;
 }
 .Bbutton:active {
-  background-color: green;
+  background-color: #119bad;
   color: white;
   border-radius: 0px;
 }
